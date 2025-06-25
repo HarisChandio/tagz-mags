@@ -15,7 +15,7 @@ import {
   ChartGantt,
   MapPin,
 } from 'lucide-react'
-import MapWidgets from '@/components/MapWidget'
+import MapWidget from '@/components/MapWidget'
 
 interface PreferencePointData {
   category: string
@@ -344,7 +344,7 @@ export default function HuntingDashboard() {
               Location & Access
             </h2>
 
-            <div className="grid lg:grid-cols-2 gap-6">
+            <div className="grid lg:grid-cols-2  gap-6">
               {/* Map Card */}
               <Card className="shadow-2xl border-0 bg-gradient-to-br from-white to-slate-50 hover:shadow-3xl transition-all duration-300">
                 <CardHeader className="pb-4">
@@ -360,12 +360,12 @@ export default function HuntingDashboard() {
                 </CardHeader>
 
                 <CardContent className="p-4">
-                  <MapWidgets />
+                  <MapWidget />
                 </CardContent>
               </Card>
 
               {/* Terrain + Area Card */}
-             
+
               <Card className="relative shadow-2xl border-0 bg-gradient-to-br from-white to-slate-50 hover:shadow-3xl transition-all duration-300">
                 <CardHeader className="pb-6">
                   <div className="flex items-center gap-3">
@@ -379,25 +379,25 @@ export default function HuntingDashboard() {
                   </div>
                 </CardHeader>
                 <CardContent className="pt-0 space-y-8">
-                  <div className="grid grid-cols-1 md:grid-cols-2 min-h-[20rem] gap-8">
-                    {/* Land Split Chart */}
-                    <div className="space-y-4">
-                      <div className="flex justify-center">
-                        <div className="w-full h-full">
-                          <LandSplitChart />
-                        </div>
-                      </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
+                    {/* Land Split Chart */}
+                    <div className="h-[18rem] flex items-stretch">
+                      <div className="w-full h-full">
+                        <LandSplitChart />
+                      </div>
                     </div>
 
                     {/* Elevation Chart */}
-                    <div className="space-y-4 ">
-                      <div className=" w-full h-full">
+                    <div className="h-[18rem] flex items-stretch">
+                      <div className="w-full h-full">
                         <ElevationRangeChart />
                       </div>
                     </div>
+
                   </div>
                 </CardContent>
+
 
                 <CardFooter className='absolute bottom-0 left-0 right-0'>
                   <div className="flex flex-col md:flex-row gap-4 w-full ">

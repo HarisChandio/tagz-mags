@@ -4,7 +4,6 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { useState } from 'react';
 
-// Dummy fence coordinates (lat, lon) — modify to match your region
 const section1 = [
   [37.6, -106.3],
   [37.65, -106.25],
@@ -13,12 +12,7 @@ const section1 = [
   [37.63, -106.37],
 ];
 
-const section2 = [
-  [37.55, -106.4],
-  [37.6, -106.35],
-  [37.62, -106.4],
-  [37.58, -106.45],
-];
+
 
 function ClickHandler() {
   useMapEvents({
@@ -46,7 +40,6 @@ export default function MapWidget() {
           pathOptions={{ color: 'red', fillColor: 'rgba(255,0,0,0.3)' }}
           positions={section1}
         />
-
 
         <ClickHandler />
       </MapContainer>

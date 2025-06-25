@@ -7,11 +7,11 @@ const innerRadius = 65;
 const circumference = 2 * Math.PI * outerRadius;
 
 const landTypes = [
-  { name: 'Plains', percentage: 60, color: '#f59e0b' }, 
-  { name: 'Mountains', percentage: 40, color: '#6b7280' }, 
+  { name: 'Plains', percentage: 60, color: '#f59e0b' },
+  { name: 'Mountains', percentage: 40, color: '#6b7280' },
 ];
 
-const forest = { name: 'Forest', percentage: 45 , color: '#10b981' }; 
+const forest = { name: 'Forest', percentage: 45 , color: '#10b981' };
 
 const LandSplitChart = () => {
   let landOffset = 0;
@@ -22,7 +22,7 @@ const LandSplitChart = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl p-4 w-full">
+<div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl p-4 w-full h-full flex flex-col justify-between ">
       <h3 className="text-sm font-bold text-slate-800 mb-2 text-center">Land &amp; Forest Distribution</h3>
       <div className="flex flex-col items-center justify-center">
         <div className="relative w-44 h-44">

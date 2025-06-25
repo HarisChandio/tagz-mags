@@ -9,7 +9,7 @@ const ElevationRangeChart = () => {
   const y = (val: number) => (1 - val / max) * 160; // 160 is height of viewBox
 
   return (
-    <div className="flex flex-col items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl p-3">
+<div className="flex flex-col justify-between bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl p-4 w-full h-full items-center">
       <h3 className="text-sm font-bold text-slate-800 mb-4 text-center">Elevation Range</h3>
      <div className='flex'>
         {/* Left Y-axis labels */}
@@ -80,7 +80,7 @@ const ElevationRangeChart = () => {
         </svg>
       </div>
      </div>
-    
+
     </div>
   );
 };

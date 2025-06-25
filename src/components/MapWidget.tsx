@@ -12,7 +12,12 @@ const section1 = [
   [37.63, -106.37],
 ];
 
-
+// Calculate the center of the polygon
+function calculatePolygonCenter(coordinates: number[][]): [number, number] {
+  const latSum = coordinates.reduce((sum, coord) => sum + coord[0], 0);
+  const lngSum = coordinates.reduce((sum, coord) => sum + coord[1], 0);
+  return [latSum / coordinates.length, lngSum / coordinates.length];
+}
 
 function ClickHandler() {
   useMapEvents({
@@ -24,8 +29,8 @@ function ClickHandler() {
 }
 
 export default function MapWidget() {
-  // center between coords
-  const center: L.LatLngExpression = [37.62, -106.3];
+  // Calculate center based on polygon coordinates
+  const center = calculatePolygonCenter(section1);
 
   return (
     <div className="w-full h-96 rounded-xl overflow-hidden shadow-lg border border-slate-200">

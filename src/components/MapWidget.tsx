@@ -46,10 +46,7 @@ export default function MapWidget() {
           pathOptions={{ color: 'red', fillColor: 'rgba(255,0,0,0.3)' }}
           positions={section1}
         />
-        <Polygon
-          pathOptions={{ color: 'blue', fillColor: 'rgba(0,0,255,0.3)' }}
-          positions={section2}
-        />
+
 
         <ClickHandler />
       </MapContainer>
